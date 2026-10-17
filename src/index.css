@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #080B11;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080B11;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1F2937;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 153, 0, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF9900;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(135deg, rgba(19, 26, 38, 0.75) 0%, rgba(15, 22, 35, 0.5) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(255, 153, 0, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(255, 153, 0, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .glass-card-purple {
+    background: linear-gradient(135deg, rgba(22, 19, 38, 0.75) 0%, rgba(15, 22, 35, 0.5) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+  }
+  .glass-card-purple:hover {
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .text-glow-orange {
+    text-shadow: 0 0 20px rgba(255, 153, 0, 0.5);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .bg-grid-mesh {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+
+  .bg-dots-pattern {
+    background-image: radial-gradient(rgba(255, 153, 0, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
